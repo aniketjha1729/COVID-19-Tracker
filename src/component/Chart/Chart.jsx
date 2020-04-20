@@ -41,7 +41,7 @@ const Chart = ({data: {confirmed,recovered,deaths},country}) => {
 
   const lineChart =(
    dailyData[0] ? (
-    <Line
+    <Line 
       data={{
         labels: dailyData.map(({ date }) =>  date),
         datasets: [{
@@ -50,7 +50,7 @@ const Chart = ({data: {confirmed,recovered,deaths},country}) => {
             borderColor: '#3333ff',
             fill: true,
           },{
-            data: dailyData.map(({ deaths }) => deaths),
+            data: dailyData.map((data)=>data.deaths),
             label: 'Deaths',
             borderColor: 'red',
             backgroundColor:'rgba(255,0,0,0.5)',
